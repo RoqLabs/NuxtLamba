@@ -81,7 +81,7 @@ Integrate the Lamba client library in your nuxt project to start using low code 
 ## Previews
 
 <p align="center">
-  <img src="public/preview1.png" alt="Preview 1" width="30%" />
+  <img src="public/preview1.png" alt="Preview 1" width="100%" />
 </p>
 
 ## Features
