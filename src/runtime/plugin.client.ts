@@ -1,9 +1,10 @@
 import { defineNuxtPlugin } from '#app'
-import type { LambaSettings } from './interfaces';
+import type { LambaPublicRuntimeConfig, LambaSettings } from './interfaces';
+let _useUpdatedVersions:boolean;
 
 const loadStyles = (callback: Function) => {
   const head = document.getElementsByTagName('head')[0];
-  const link = "https://sdk.lambahq.com/v1.min.css";
+  const link = `https://sdk.lambahq.com/v1.min.css${_useUpdatedVersions?`?${+new Date()}`:''}`;
 
   // prevent duplicate injections
   if(head.querySelector(`link[href="${link}"]`)) return callback();
@@ -26,7 +27,7 @@ const loadStyles = (callback: Function) => {
 
 const loadScript = () => {
   const head = document.getElementsByTagName('head')[0];
-  const link = "https://sdk.lambahq.com/v1.js";
+  const link = `https://sdk.lambahq.com/v1.js${_useUpdatedVersions?`?${+new Date()}`:''}`;
 
   // prevent duplicate injections
   if(head.querySelector(`script[src="${link}"]`)) return;
@@ -59,6 +60,10 @@ const lamba = (config: LambaSettings)=>{
 }
 
 export default defineNuxtPlugin((nuxtApp) => {
+  const lambaConfig = nuxtApp.$config.public?.lamba as LambaPublicRuntimeConfig;
+  const useUpdatedVersions = lambaConfig?.alwaysUseUpToDateVersions;
+  _useUpdatedVersions = useUpdatedVersions;
+
   // load assets
   loadAssets();
 

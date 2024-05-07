@@ -1,5 +1,11 @@
 export default defineNuxtConfig({
   modules: ['../src/module'],
-  ssr: false,
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+      lamba: {
+        alwaysUseUpToDateVersions: true
+      }
+    }
+  }
 })

@@ -111,7 +111,7 @@ npm install --save-dev @lambahq/nuxt
 
 ```js
 export default defineNuxtConfig({
-  ssr: false, // REQUIRED
+  ssr: true, // "true" or "false". Works eitherway regardless. i.e Lamba is SSR friendly!
   modules: [
     '@lambahq/nuxt'
   ]
@@ -138,6 +138,21 @@ const openLamba = ()=>{
     console.log(data);
   })
 }
+```
+
+## Using Up To Date Versions
+To always use the updated versions of the library, set the `alwaysUseUpToDateVersions` property to `true` in the `nuxt.config.js` file of your project like so:
+
+```js
+export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      lamba: {
+        alwaysUseUpToDateVersions: true
+      }
+    }
+  }
+})
 ```
 
 That's it! You can now use Lamba in your Nuxt app ✨

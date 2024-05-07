@@ -12,3 +12,8 @@ export interface LambaSettings {
     enabledServices: string[],
     usageCapabilities: string[], 
 }
+
+export interface LambaPublicRuntimeConfig{
+    alwaysUseUpToDateVersions: boolean
+}
+  
