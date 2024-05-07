@@ -98,13 +98,13 @@ Integrate the Lamba client library in your nuxt project to start using low code 
 
 ```bash
 # Using pnpm
-pnpm add -D @lambahq/nuxt
+pnpm add @lambahq/nuxt
 
 # Using yarn
-yarn add --dev @lambahq/nuxt
+yarn add @lambahq/nuxt
 
 # Using npm
-npm install --save-dev @lambahq/nuxt
+npm install @lambahq/nuxt
 ```
 
 2. Add `@lambahq/nuxt` to the `modules` section of `nuxt.config.ts` and setup the runtimeConfig as shown below:

@@ -1,6 +1,6 @@
 {
   "name": "@lambahq/nuxt",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Lamba's official Nuxt module",
   "repository": "https://github.com/RoqLabs/NuxtLamba",
   "keywords": ["lamba","nuxt","nuxt-lamba","low code", "payments","lowfi","low-sms","low-mail","all in one low code tool","low-social","low-ai","low-meet"],
