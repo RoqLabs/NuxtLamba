@@ -118,6 +118,28 @@ export default defineNuxtConfig({
 })
 ```
 
+## Usage
+```js
+import { useNuxtApp } from '#app';
+const nuxtApp = useNuxtApp();
+
+const openLamba = ()=>{
+  const config = {
+    title: "Lamba",
+    theme: "light",
+    appId: "65aabeba6182d6903a2ea355",
+    customerId: "cus_x1847",
+  };
+
+  const lamba = nuxtApp.$lamba(config);
+
+  // listening for events
+  lamba.on("name_of_the_event",(data)=>{
+    console.log(data);
+  })
+}
+```
+
 That's it! You can now use Lamba in your Nuxt app ✨
 
 <!-- Badges -->
