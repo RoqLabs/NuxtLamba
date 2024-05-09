@@ -21,6 +21,9 @@
     // listening for events
     lamba.on("name_of_the_event",(data)=>{
       console.log(data);
-    })
+    });
+
+    // closing lamba
+    lamba.close();
   }
 </script>

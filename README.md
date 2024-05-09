@@ -136,8 +136,13 @@ const openLamba = ()=>{
   // listening for events
   lamba.on("name_of_the_event",(data)=>{
     console.log(data);
-  })
+  });
+
+  // Closing:
+  lamba.close();
 }
+
+
 ```
 
 ## Using Up To Date Versions
